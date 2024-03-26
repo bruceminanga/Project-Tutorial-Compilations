@@ -6,3 +6,4 @@ class CouponApplyForm(forms.Form):
 
 class CouponApplyForm2(forms.Form):
     code = forms.CharField()
+    code2 = forms.CharField()

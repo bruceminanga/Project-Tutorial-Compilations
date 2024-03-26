@@ -17,7 +17,7 @@ def home(request):
     form2 = CouponApplyForm2()
     if request.method == 'POST':
         if 'form' in request.POST:
-            form = forms.BlogForm()
+            form = forms.CouponApplyForm()
             
         if 'fom2' in request.POST:
             form2 = forms.CouponApplyForm2()
