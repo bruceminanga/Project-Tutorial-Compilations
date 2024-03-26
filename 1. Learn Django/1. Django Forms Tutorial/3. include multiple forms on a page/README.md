@@ -1,0 +1,1 @@
+In this tutorial, i learned how to integrate more than one form in s single django page. This tutorial helped me complete Peters project(nurseprofessors.com) where in a single page, i needed more than one form. I hope it will help someone
