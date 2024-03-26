@@ -16,14 +16,34 @@ def home(request):
     form = CouponApplyForm()
     form2 = CouponApplyForm2()
     if request.method == 'POST':
-        if 'form' in request.POST:
+        if 'form' in request.POST and 'fom2' in request.POST:
             form = forms.CouponApplyForm()
-            
-        if 'fom2' in request.POST:
             form2 = forms.CouponApplyForm2()
+        
+            
             
     context = {
         'form': form,
         'form2': form2,
     }
     return render(request, 'index.html', context=context)
+
+    # More Readable
+    """ def home(request):
+    # Initialize forms
+    form = CouponApplyForm()
+    form2 = CouponApplyForm2()
+
+    # Check if both forms are in the POST request
+    if request.method == 'POST' and 'form' in request.POST and 'fom2' in request.POST:
+        form = forms.CouponApplyForm()
+        form2 = forms.CouponApplyForm2()
+
+    # Prepare context
+    context = {
+        'form': form,
+        'form2': form2,
+    }
+
+    # Render the page with the context
+    return render(request, 'index.html', context) """
