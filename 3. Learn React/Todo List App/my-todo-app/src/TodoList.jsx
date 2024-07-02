@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react'
 
-const TodoList = () => {
-  const [todos, setTodos] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+function TodoList() {
+  const [todos, setTodos] = useState([])
+  const [inputValue, setInputValue] = useState('')
 
   const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
+    setInputValue(e.target.value)
+  }
 
   const handleAddTodo = () => {
     if (inputValue.trim() !== '') {
-      setTodos([...todos, inputValue]);
-      setInputValue('');
+      setTodos([...todos, inputValue])
+      setInputValue('')
     }
-  };
+  }
 
   return (
     <div className="p-4 max-w-md mx-auto">
@@ -39,7 +39,7 @@ const TodoList = () => {
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default TodoList;
+export default TodoList
